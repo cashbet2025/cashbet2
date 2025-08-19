@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Messenger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script');
+    fbq('init', '755902323515405'); <!-- ✅ Pixel ID corregido -->
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=755902323515405&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    header {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .logo-text {
+      color: #00C851; /* VERDE */
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    hr {
+      width: 100%;
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 20px 0;
+    }
+
+    .verified {
+      text-align: center;
+    }
+
+    .verified img {
+      width: 100px;
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+
+    .verified h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .verified .black {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .verified .green {
+      color: #00C851;
+      font-weight: 600;
+    }
+
+    .message {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .whatsapp-button {
+      background-color: #00C851;
+      color: #fff;
+      padding: 18px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+      box-shadow: 0 4px 15px rgba(0, 200, 81, 0.3);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      z-index: 1;
+      min-width: 250px;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #00b94f;
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px #00C851;
+    }
+
+    .whatsapp-button i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+
+    .clientes {
+      background-color: #dffae8;
+      color: #00C851;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .trustpilot {
+      font-size: 14px;
+      padding: 8px 15px;
+      border: 1px dashed #00C851;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #444;
+      background-color: #f8f8f8;
+    }
+
+    .trustpilot img {
+      margin-top: 5px;
+      max-width: 120px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(to right, #00C851, #00b94f);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .whatsapp-button {
+        font-size: 16px;
+        padding: 16px 25px;
+        min-width: 220px;
+      }
+      .clientes {
+        font-size: 14px;
+        padding: 12px 18px;
+      }
+      .message {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-text">WhatsApp Messenger</div>
+  </header>
+
+  <hr />
+
+  <section class="verified">
+    <a href="https://wa.me/5491133277063" target="_blank" onclick="fbq('trackCustom', 'ClickWhatsApp')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" width="50" height="50" />
+    </a>
+    <h2>✅ <span class="black">Plataforma Verificada</span> ✅</h2>
+    <p class="green">Casino de Confianza</p>
+  </section>
+
+  <div class="message">
+    Te estamos conectando con nuestro equipo vía WhatsApp.
+  </div>
+
+  <a class="whatsapp-button" 
+     href="https://wa.me/5491133277063?text=Quiero%20mi%20bono%20del%2030%25" 
+     target="_blank"
+     onclick="fbq('trackCustom', 'ClickWhatsApp')">
+    <i class="fab fa-whatsapp"></i> ¡QUIERO MI BONO!
+  </a>
+
+  <div class="clientes">
+    👥 +10.000 CLIENTES GANANDO todos los días
+  </div>
+
+  <div class="trustpilot">
+    "Excelente" ⭐⭐⭐⭐⭐ Calificación 4.9/5 en Trustpilot<br/>
+    <img src="https://logowik.com/content/uploads/images/trustpilot-stars9095.jpg" alt="Trustpilot" />
+  </div>
+
+  <div class="footer">
+    🎁 BONO DEL 30% ACTIVO - ¡Solicítalo ahora por WhatsApp!
+  </div>
+
+<!-- ✅ Premios Pagados -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const config = {
+      posicion: "izquierda",
+      intervalo: 6,
+      duracion: 3,
+      tiempoMaximo: 2,
+      productImage: "http://imgfz.com/i/cZTgRO4.jpeg"
+    };
+
+    const nombres = [
+      "Juan Gómez", "María López", "Carlos Pérez", "Ana Ramírez",
+      "José Morales", "Laura Castro", "Exe Bosch", "Danielita Roy"
+    ];
+    const ciudades = ["Jujuy", "Córdoba", "Tucumán", "Salta", "Rosario", "Santa Fe"];
+
+    function getRandom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    function getTimeAgo() {
+      const h = Math.floor(Math.random() * config.tiempoMaximo);
+      const m = Math.floor(Math.random() * 60);
+      return h === 0 ? `hace ${m} minutos` : `hace ${h} hora${h > 1 ? 's' : ''}`;
+    }
+
+    function getPremioAleatorio() {
+      const min = 30000;
+      const max = 150000;
+      const monto = Math.floor(Math.random() * ((max - min) / 1000 + 1)) * 1000 + min;
+      return `🎁 Reclamó su premio de $${monto.toLocaleString('es-AR')}`;
+    }
+
+    function showNotification() {
+      const nombre = getRandom(nombres);
+      const ciudad = getRandom(ciudades);
+      const tiempo = getTimeAgo();
+      const premio = getPremioAleatorio();
+
+      const noti = document.createElement("div");
+      noti.className = "xpo-notification-wrap";
+      noti.innerHTML = `
+        <div class="xpo-img-wrap">
+          <img src="${config.productImage}" alt="Premio">
+        </div>
+        <div class="xpo-col">
+          <div class="xpo-notification-name">${nombre}</div>
+          <div class="xpo-notification-product">${premio}</div>
+          <div class="xpo-location">Desde ${ciudad} • ${tiempo}</div>
+        </div>
+      `;
+      document.body.appendChild(noti);
+      setTimeout(() => noti.classList.add("show"), 100);
+      setTimeout(() => {
+        noti.classList.remove("show");
+        setTimeout(() => noti.remove(), 500);
+      }, config.duracion * 1000);
+    }
+
+    const styles = `
+      .xpo-notification-wrap {
+        position: fixed;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        width: 280px;
+        z-index: 9999;
+        border: 1px solid #e2e8f0;
+        backdrop-filter: blur(8px);
+        opacity: 0;
+        left: -300px;
+        bottom: 25px;
+        transition: all 0.5s ease;
+      }
+      .xpo-notification-wrap.show { left: 20px; opacity: 1; }
+      .xpo-img-wrap img {
+        width: 42px;
+        height: 42px;
+        border-radius: 6px;
+        object-fit: cover;
+      }
+      .xpo-col { margin-left: 12px; }
+      .xpo-notification-name { font-weight: bold; font-size: 0.9em; color: #0f172a; }
+      .xpo-notification-product { font-size: 0.85em; color: #0284c7; }
+      .xpo-location { font-size: 0.75em; color: #64748b; }
+      .xpo-location::before { content: "📍"; margin-right: 4px; }
+    `;
+
+    const styleTag = document.createElement("style");
+    styleTag.textContent = styles;
+    document.head.appendChild(styleTag);
+
+    showNotification();
+    setInterval(showNotification, config.intervalo * 1000);
+  });
+</script>
+</body>
+</html>
